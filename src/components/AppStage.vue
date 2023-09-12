@@ -2,7 +2,16 @@
   <main>
     <h1>Form Styler</h1>
 
-    <Inputs />
+    <div class="left-pane controls">
+      <h2>Settings:</h2>
+
+      <input @change="handleBorderRadiusUpdate" type="range" id="borderRadiusInput" name="borderRadiusInput" min="0" max="100" />
+      <label for="borderRadiusInput">Border Radius</label>
+    </div>
+
+    <div class="right-pane">
+      <Inputs :borderColor="borderColor" :borderRadius="borderRadius" :borderWidth="borderWidth" />
+    </div>
   </main>
 </template>
 
@@ -16,6 +25,18 @@ export default {
   },
   components: {
     Inputs
+  },
+  data() {
+    return {
+      borderRadius: 0,
+      borderWidth: 0,
+      borderColor: 0,
+    }
+  },
+  methods: {
+    handleBorderRadiusUpdate(e) {
+      this.borderRadius = e.target.value;
+    }
   }
 }
 </script>
