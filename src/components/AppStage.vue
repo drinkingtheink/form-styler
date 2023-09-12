@@ -35,12 +35,20 @@
         :borderWidth="borderWidth"
         :inputPadding="inputPadding"
       />
+
+      <Buttons 
+        :borderColor="borderColor" 
+        :borderRadius="borderRadius" 
+        :borderWidth="borderWidth"
+        :inputPadding="inputPadding"
+      />
     </div>
   </main>
 </template>
 
 <script>
 import Inputs from './Inputs.vue'
+import Buttons from './Buttons.vue'
 
 export default {
   name: 'AppStage',
@@ -48,7 +56,8 @@ export default {
     msg: String
   },
   components: {
-    Inputs
+    Inputs,
+    Buttons,
   },
   data() {
     return {
