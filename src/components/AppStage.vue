@@ -5,10 +5,26 @@
     <div class="left-pane controls">
       <h2>Settings:</h2>
 
-      <input @change="handleBorderRadiusUpdate" type="range" id="borderRadiusInput" name="borderRadiusInput" min="0" max="100" />
+      <input 
+        @input="handleBorderRadiusUpdate" 
+        type="range" 
+        id="borderRadiusInput" 
+        name="borderRadiusInput" 
+        min="0" 
+        max="50" 
+        value="10"
+      />
       <label for="borderRadiusInput">Border Radius</label>
 
-      <input @change="handleInputPaddingUpdate" type="range" id="borderRadiusInput" name="borderRadiusInput" min="0" max="100" />
+      <input 
+        @input="handleInputPaddingUpdate" 
+        type="range" 
+        id="borderRadiusInput" 
+        name="borderRadiusInput" 
+        min="0" 
+        max="100" 
+        value="10"
+      />
       <label for="borderRadiusInput">Padding</label>
     </div>
 
@@ -36,10 +52,10 @@ export default {
   },
   data() {
     return {
-      borderRadius: 0,
+      borderRadius: 10,
       borderWidth: 0,
       borderColor: 0,
-      inputPadding: 0,
+      inputPadding: 10,
     }
   },
   methods: {
@@ -53,19 +69,6 @@ export default {
 }
 </script>
 
-<style scoped>
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
+<style lang="scss">
+
 </style>

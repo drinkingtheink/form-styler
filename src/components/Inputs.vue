@@ -4,12 +4,22 @@
 
       <section>
         <label for="text-input-exanmple">Text Input Example:</label>
-        <input :style="inputStyles" id="text-input-example" type="text" placeholder="An Example Text Input" />
+        <input 
+            :style="inputStyles" 
+            id="text-input-example" 
+            type="text" 
+            placeholder="An Example Text Input"
+        />
       </section>
 
       <section>
         <label for="textarea-input-exanmple">Textarea Input Example:</label>
-        <textarea :style="inputStyles" id="textarea-input-example" type="text" placeholder="An Example Text Input" />
+        <textarea 
+            :style="inputStyles" 
+            id="textarea-input-example" 
+            type="text" 
+            placeholder="An Example Text Input" 
+        />
       </section>
   </div>
 </template>
@@ -26,7 +36,7 @@ export default {
   computed: {
       inputStyles() {
           return {
-              'borderRadius': `${this.borderRadius}%`,
+              'borderRadius': `${this.borderRadius}px`,
               'padding': `${this.inputPadding}px`,
           }
       }
@@ -34,6 +44,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+
 
 </style>
