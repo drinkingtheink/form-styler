@@ -1,7 +1,5 @@
 <template>
   <main>
-    <h1>Form Styler</h1>
-
     <div class="left-pane controls">
       <h2>Settings:</h2>
 
@@ -29,6 +27,8 @@
     </div>
 
     <div class="right-pane">
+      <h1>Elements</h1>
+
       <Inputs 
         :borderColor="borderColor" 
         :borderRadius="borderRadius" 
@@ -69,6 +69,19 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style>
+main {
+  display: flex;
+}
 
+.left-pane {
+  width: 30%;
+  max-width: 400px;
+}
+
+.right-pane {
+  padding-left: 2rem;
+  border-left: 1px solid;
+  height: 100vh;
+}
 </style>

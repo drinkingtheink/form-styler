@@ -44,7 +44,9 @@ export default {
 }
 </script>
 
-<style lang="scss">
-
+<style scoped>
+section {
+    margin: 1rem 0;
+}
 
 </style>
