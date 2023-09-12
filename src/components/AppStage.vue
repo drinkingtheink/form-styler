@@ -7,10 +7,18 @@
 
       <input @change="handleBorderRadiusUpdate" type="range" id="borderRadiusInput" name="borderRadiusInput" min="0" max="100" />
       <label for="borderRadiusInput">Border Radius</label>
+
+      <input @change="handleInputPaddingUpdate" type="range" id="borderRadiusInput" name="borderRadiusInput" min="0" max="100" />
+      <label for="borderRadiusInput">Padding</label>
     </div>
 
     <div class="right-pane">
-      <Inputs :borderColor="borderColor" :borderRadius="borderRadius" :borderWidth="borderWidth" />
+      <Inputs 
+        :borderColor="borderColor" 
+        :borderRadius="borderRadius" 
+        :borderWidth="borderWidth"
+        :inputPadding="inputPadding"
+      />
     </div>
   </main>
 </template>
@@ -31,12 +39,16 @@ export default {
       borderRadius: 0,
       borderWidth: 0,
       borderColor: 0,
+      inputPadding: 0,
     }
   },
   methods: {
     handleBorderRadiusUpdate(e) {
       this.borderRadius = e.target.value;
-    }
+    },
+    handleInputPaddingUpdate(e) {
+      this.inputPadding = e.target.value;
+    },
   }
 }
 </script>

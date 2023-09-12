@@ -21,11 +21,13 @@ export default {
     borderRadius: String,
     borderWidth: String,
     borderColor: String,
+    inputPadding: String,
   },
   computed: {
       inputStyles() {
           return {
-              'borderRadius': `${this.borderRadius}%`
+              'borderRadius': `${this.borderRadius}%`,
+              'padding': `${this.inputPadding}px`,
           }
       }
   }
