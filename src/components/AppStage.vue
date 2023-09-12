@@ -1,19 +1,25 @@
 <template>
   <main>
     <h1>Form Styler</h1>
+
+    <Inputs />
   </main>
 </template>
 
 <script>
+import Inputs from './Inputs.vue'
+
 export default {
   name: 'AppStage',
   props: {
     msg: String
+  },
+  components: {
+    Inputs
   }
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 h3 {
   margin: 40px 0 0;
