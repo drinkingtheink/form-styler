@@ -3,6 +3,7 @@
     <div class="left-pane controls">
       <h2>Settings:</h2>
 
+      <h3>Inputs</h3>
       <input 
         @input="handleBorderRadiusUpdate" 
         type="range" 
@@ -10,9 +11,9 @@
         name="borderRadiusInput" 
         min="0" 
         max="100" 
-        value="10"
+        value="2"
       />
-      <label for="borderRadiusInput"><strong>{{ borderRadius }}px</strong> Border Radius</label>
+      <label for="borderRadiusInput"><strong>{{ borderRadius }}%</strong> Border Radius</label>
 
       <input 
         @input="handleInputHorPaddingUpdate" 
@@ -20,8 +21,8 @@
         id="horPaddingInput" 
         name="horPaddingInput" 
         min="0" 
-        max="100" 
-        value="10"
+        max="500" 
+        value="5"
       />
       <label for="horPaddingInput"><strong>{{ inputHorPadding }}px</strong> Horizontal Padding</label>
 
@@ -31,10 +32,35 @@
         id="vertPaddingInput" 
         name="vertPaddingInput" 
         min="0" 
-        max="100" 
+        max="500" 
         value="10"
       />
       <label for="vertPaddingInput"><strong>{{ inputVertPadding }}px</strong> Vertical Padding</label>
+    
+      <h3>Buttons</h3>
+
+      <input 
+        @input="handleBtnHorPaddingUpdate" 
+        type="range" 
+        id="btnHorPaddingInput" 
+        name="btnHorPaddingInput" 
+        min="0" 
+        max="500" 
+        value="5"
+      />
+      <label for="btnHorPaddingInput"><strong>{{ btnHorPadding }}px</strong> Horizontal Padding</label>
+      
+      
+      <input 
+        @input="handleBtnVertPaddingUpdate" 
+        type="range" 
+        id="btnVertPaddingInput" 
+        name="btnVertPaddingInput" 
+        min="0" 
+        max="500"
+        value="10"
+      />
+      <label for="btnVertPaddingInput"><strong>{{ btnVertPadding }}px</strong> Vertical Padding</label>
     </div>
 
     <div class="right-pane">
@@ -52,7 +78,8 @@
         :borderColor="borderColor" 
         :borderRadius="borderRadius" 
         :borderWidth="borderWidth"
-        :inputPadding="inputPadding"
+        :btnHorPadding="btnHorPadding"
+        :btnVertPadding="btnVertPadding"
       />
     </div>
   </main>
@@ -73,11 +100,15 @@ export default {
   },
   data() {
     return {
-      borderRadius: 10,
+      borderRadius: 2,
       borderWidth: 0,
       borderColor: 0,
-      inputHorPadding: 10,
+      inputHorPadding: 5,
       inputVertPadding: 10,
+      btnHorPadding: 5,
+      btnVertPadding: 10,
+      activeColor: null,
+      secondaryColor: null,
     }
   },
   methods: {
@@ -89,6 +120,12 @@ export default {
     },
     handleInputVertPaddingUpdate(e) {
       this.inputVertPadding = e.target.value;
+    },
+    handleBtnHorPaddingUpdate(e) {
+      this.btnHorPadding = e.target.value;
+    },
+    handleBtnVertPaddingUpdate(e) {
+      this.btnVertPadding = e.target.value;
     },
   }
 }

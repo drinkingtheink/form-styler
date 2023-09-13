@@ -15,13 +15,14 @@ export default {
     borderRadius: String,
     borderWidth: String,
     borderColor: String,
-    inputPadding: String,
+    btnHorPadding: String,
+    btnVertPadding: String,
   },
   computed: {
       btnStyles() {
           return {
-              'borderRadius': `${this.borderRadius}px`,
-              'padding': `${this.inputPadding}px`,
+              'borderRadius': `${this.borderRadius}%`,
+              'padding': `${this.btnVertPadding}px ${this.btnHorPadding}px`,
           }
       }
   }

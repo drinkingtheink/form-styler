@@ -25,4 +25,8 @@ export default {
 label {
   display: block;
 }
+
+input[type=text], textarea {
+  min-width: 300px;
+}
 </style>
