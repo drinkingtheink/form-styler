@@ -123,9 +123,6 @@ import Colors from './Colors.vue'
 
 export default {
   name: 'AppStage',
-  props: {
-    msg: String
-  },
   components: {
     Inputs,
     Buttons,
