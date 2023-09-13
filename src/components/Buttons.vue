@@ -2,7 +2,7 @@
   <div class="buttons-collection">
       <h2>Buttons</h2>
 
-      <section>
+      <section class="buttons-gallery">
         <button :style="btnStyles">Check It Out</button>
       </section>
   </div>
@@ -14,7 +14,6 @@ export default {
   props: {
     borderRadius: String,
     borderWidth: String,
-    borderColor: String,
     btnHorPadding: String,
     btnVertPadding: String,
   },
@@ -29,9 +28,13 @@ export default {
 }
 </script>
 
-<style scoped>
-section {
+<style>
+.buttons-gallery {
     margin: 1rem 0;
 }
 
+button {
+    background-color: var(--primary);
+    color: var(--secondary);
+}
 </style>

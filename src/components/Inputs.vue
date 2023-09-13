@@ -30,7 +30,6 @@ export default {
   props: {
     borderRadius: String,
     borderWidth: String,
-    borderColor: String,
     inputHorPadding: String,
     inputVertPadding: String,
   },
@@ -39,15 +38,19 @@ export default {
           return {
               'borderRadius': `${this.borderRadius}px`,
               'padding': `${this.inputVertPadding}px ${this.inputHorPadding}px`,
+              'border': `${this.borderWidth}px solid`
           }
       }
   }
 }
 </script>
 
-<style scoped>
+<style>
 section {
     margin: 1rem 0;
 }
 
+input, textarea {
+    border-color: var(--primary) !important;
+}
 </style>

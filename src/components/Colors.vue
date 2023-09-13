@@ -3,8 +3,8 @@
     <h2>Colors</h2>
 
     <section>
-        <div :style="primaryStyles" class="color-swatch primary">Primary</div>
-        <div :style="secondaryStyles" class="color-swatch secondary">Secondary</div>
+        <div class="color-swatch primary">Primary</div>
+        <div class="color-swatch secondary">Secondary</div>
     </section>
   </div>
 </template>
@@ -16,18 +16,6 @@ export default {
       primary: String,
       secondary: String,
   },
-  computed: {
-      primaryStyles() {
-          return {
-              'backgroundColor': `${this.primary}`
-          }
-      },
-      secondaryStyles() {
-          return {
-              'backgroundColor': `${this.secondary}`
-          }
-      },
-  }
 }
 </script>
 
@@ -41,5 +29,13 @@ section {
     padding: 2rem;
     margin-right: 10px;
     border: 5px solid rgba(0,0,0,0.2);
+}
+
+.primary {
+    background-color: var(--primary);
+}
+
+.secondary {
+    background-color: var(--secondary);
 }
 </style>

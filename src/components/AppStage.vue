@@ -9,7 +9,6 @@
         type="color" 
         id="primaryColorInput" 
         name="primaryColorInput" 
-        value="#e66465" 
       />
       <label for="primaryColorInput">Primary</label>
 
@@ -18,7 +17,6 @@
         type="color" 
         id="secondaryColorInput" 
         name="secondaryColorInput" 
-        value="#e66465" 
       />
       <label for="secondaryColorInput">Secondary</label>
 
@@ -55,6 +53,17 @@
         value="10"
       />
       <label for="vertPaddingInput"><strong>{{ inputVertPadding }}px</strong> Vertical Padding</label>
+
+      <input 
+        @input="handleInputBorderWidthUpdate" 
+        type="range" 
+        id="inputBorderWidthInput" 
+        name="inputBorderWidthInput" 
+        min="0" 
+        max="50" 
+        value="10"
+      />
+      <label for="inputBorderWidthInput"><strong>{{ inputBorderWidth }}px</strong> Border Width</label>
     
       <h3>Buttons</h3>
 
@@ -65,7 +74,7 @@
         name="btnHorPaddingInput" 
         min="0" 
         max="500" 
-        value="5"
+        value="50"
       />
       <label for="btnHorPaddingInput"><strong>{{ btnHorPadding }}px</strong> Horizontal Padding</label>
       
@@ -91,15 +100,13 @@
       />
 
       <Inputs 
-        :borderColor="borderColor" 
         :borderRadius="borderRadius" 
-        :borderWidth="borderWidth"
+        :borderWidth="inputBorderWidth"
         :inputHorPadding="inputHorPadding"
         :inputVertPadding="inputVertPadding"
       />
 
       <Buttons 
-        :borderColor="borderColor" 
         :borderRadius="borderRadius" 
         :borderWidth="borderWidth"
         :btnHorPadding="btnHorPadding"
@@ -127,11 +134,10 @@ export default {
   data() {
     return {
       borderRadius: 2,
-      borderWidth: 0,
-      borderColor: 0,
+      inputBorderWidth: 5,
       inputHorPadding: 5,
       inputVertPadding: 10,
-      btnHorPadding: 5,
+      btnHorPadding: 50,
       btnVertPadding: 10,
       color: {
         primary: null,
@@ -163,6 +169,9 @@ export default {
       this.color.secondary = e.target.value;
       document.documentElement.style.setProperty('--secondary', e.target.value);
     },
+    handleInputBorderWidthUpdate(e) {
+      this.inputBorderWidth = e.target.value;
+    },
   }
 }
 </script>
@@ -181,5 +190,9 @@ main {
   padding-left: 2rem;
   border-left: 1px solid;
   height: 100vh;
+}
+
+.controls input {
+  margin-top: 1rem;
 }
 </style>
