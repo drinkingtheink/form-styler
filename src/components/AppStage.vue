@@ -3,6 +3,25 @@
     <div class="left-pane controls">
       <h2>Settings:</h2>
 
+      <h3>Colors</h3>
+      <input 
+        @input="handlePrimaryColorUpdate"
+        type="color" 
+        id="primaryColorInput" 
+        name="primaryColorInput" 
+        value="#e66465" 
+      />
+      <label for="primaryColorInput">Primary</label>
+
+      <input 
+        @input="handleSecondaryColorUpdate"
+        type="color" 
+        id="secondaryColorInput" 
+        name="secondaryColorInput" 
+        value="#e66465" 
+      />
+      <label for="secondaryColorInput">Secondary</label>
+
       <h3>Inputs</h3>
       <input 
         @input="handleBorderRadiusUpdate" 
@@ -135,6 +154,12 @@ export default {
     },
     handleBtnVertPaddingUpdate(e) {
       this.btnVertPadding = e.target.value;
+    },
+    handlePrimaryColorUpdate(e) {
+      this.color.primary = e.target.value;
+    },
+    handleSecondaryColorUpdate(e) {
+      this.color.secondary = e.target.value;
     },
   }
 }
