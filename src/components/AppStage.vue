@@ -38,7 +38,7 @@
         max="100" 
         value="2"
       />
-      <label for="borderRadiusInput"><strong>{{ borderRadius }}</strong> Border Radius</label>
+      <label for="borderRadiusInput"><strong>{{ inputBorderRadius }}</strong> Border Radius</label>
 
       <input 
         @input="handleInputHorPaddingUpdate" 
@@ -95,7 +95,7 @@
         max="500" 
         value="50"
       />
-      <label for="btnHorPaddingInput"><strong>{{ btnHorPadding }}px</strong> Horizontal Padding</label>
+      <label for="btnHorPaddingInput"><strong>{{ btnHorPadding }}</strong> Horizontal Padding</label>
       
       
       <input 
@@ -104,10 +104,9 @@
         id="btnVertPaddingInput" 
         name="btnVertPaddingInput" 
         min="0" 
-        max="500"
-        value="10"
+        max="200"
       />
-      <label for="btnVertPaddingInput"><strong>{{ btnVertPadding }}px</strong> Vertical Padding</label>
+      <label for="btnVertPaddingInput"><strong>{{ btnVertPadding }}</strong> Vertical Padding</label>
     </div>
 
     <div class="right-pane">
@@ -140,6 +139,7 @@ export default {
       inputBorderWidth: 5,
       inputHorPadding: 5,
       inputVertPadding: 10,
+      inputBorderRadius: null,
       btnHorPadding: 50,
       btnVertPadding: 10,
       btnBorderRadius: 0,
@@ -151,7 +151,7 @@ export default {
   },
   methods: {
     handleBorderRadiusUpdate(e) {
-      this.borderRadius = `${e.target.value}px`;
+      this.inputBorderRadius = `${e.target.value}px`;
       document.documentElement.style.setProperty('--inputBorderRadius', `${e.target.value}px`);
     },
     handleInputHorPaddingUpdate(e) {

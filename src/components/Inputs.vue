@@ -1,5 +1,5 @@
 <template>
-  <div class="input-collection">
+  <div class="">
       <h2>Inputs</h2>
 
       <section>
@@ -33,8 +33,9 @@ section {
     margin: 1rem 0;
 }
 
-input, textarea {
-    border-color: var(--primary) !important;
-    padding: var(--inputHorPadding)px var(--inputVertPadding)px;
+.input-collection input, .input-collection textarea {
+    border: var(--inputBorderWidth) solid var(--primary) !important;
+    padding: var(--inputHorPadding) var(--inputVertPadding);
+    border-radius: var(--inputBorderRadius);
 }
 </style>

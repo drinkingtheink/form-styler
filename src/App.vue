@@ -36,7 +36,7 @@ input[type=text], textarea {
   --inputBorderWidth: 5px;
   --inputHorPadding: 10px;
   --inputVertPadding: 5px;
-  --inputBorderWidth: 5px;
+  --inputBorderRadius: 5px;
   --btnBorderRadius: 5px;
   --btnHorPadding: 20px;
   --btnVertPadding: 10px;
