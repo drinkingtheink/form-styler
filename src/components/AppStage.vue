@@ -66,6 +66,11 @@
     <div class="right-pane">
       <h1>Elements</h1>
 
+      <Colors 
+        :primary="color.primary"
+        :secondary="color.secondary"
+      />
+
       <Inputs 
         :borderColor="borderColor" 
         :borderRadius="borderRadius" 
@@ -88,6 +93,7 @@
 <script>
 import Inputs from './Inputs.vue'
 import Buttons from './Buttons.vue'
+import Colors from './Colors.vue'
 
 export default {
   name: 'AppStage',
@@ -97,6 +103,7 @@ export default {
   components: {
     Inputs,
     Buttons,
+    Colors,
   },
   data() {
     return {
@@ -107,8 +114,10 @@ export default {
       inputVertPadding: 10,
       btnHorPadding: 5,
       btnVertPadding: 10,
-      activeColor: null,
-      secondaryColor: null,
+      color: {
+        primary: null,
+        secondary: null,
+      }
     }
   },
   methods: {
