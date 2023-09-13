@@ -31,13 +31,14 @@ export default {
     borderRadius: String,
     borderWidth: String,
     borderColor: String,
-    inputPadding: String,
+    inputHorPadding: String,
+    inputVertPadding: String,
   },
   computed: {
       inputStyles() {
           return {
               'borderRadius': `${this.borderRadius}px`,
-              'padding': `${this.inputPadding}px`,
+              'padding': `${this.inputVertPadding}px ${this.inputHorPadding}px`,
           }
       }
   }

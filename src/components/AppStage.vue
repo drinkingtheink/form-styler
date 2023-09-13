@@ -9,21 +9,32 @@
         id="borderRadiusInput" 
         name="borderRadiusInput" 
         min="0" 
-        max="50" 
+        max="100" 
         value="10"
       />
-      <label for="borderRadiusInput">Border Radius</label>
+      <label for="borderRadiusInput"><strong>{{ borderRadius }}px</strong> Border Radius</label>
 
       <input 
-        @input="handleInputPaddingUpdate" 
+        @input="handleInputHorPaddingUpdate" 
         type="range" 
-        id="borderRadiusInput" 
-        name="borderRadiusInput" 
+        id="horPaddingInput" 
+        name="horPaddingInput" 
         min="0" 
         max="100" 
         value="10"
       />
-      <label for="borderRadiusInput">Padding</label>
+      <label for="horPaddingInput"><strong>{{ inputHorPadding }}px</strong> Horizontal Padding</label>
+
+      <input 
+        @input="handleInputVertPaddingUpdate" 
+        type="range" 
+        id="vertPaddingInput" 
+        name="vertPaddingInput" 
+        min="0" 
+        max="100" 
+        value="10"
+      />
+      <label for="vertPaddingInput"><strong>{{ inputVertPadding }}px</strong> Vertical Padding</label>
     </div>
 
     <div class="right-pane">
@@ -33,7 +44,8 @@
         :borderColor="borderColor" 
         :borderRadius="borderRadius" 
         :borderWidth="borderWidth"
-        :inputPadding="inputPadding"
+        :inputHorPadding="inputHorPadding"
+        :inputVertPadding="inputVertPadding"
       />
 
       <Buttons 
@@ -64,15 +76,19 @@ export default {
       borderRadius: 10,
       borderWidth: 0,
       borderColor: 0,
-      inputPadding: 10,
+      inputHorPadding: 10,
+      inputVertPadding: 10,
     }
   },
   methods: {
     handleBorderRadiusUpdate(e) {
       this.borderRadius = e.target.value;
     },
-    handleInputPaddingUpdate(e) {
-      this.inputPadding = e.target.value;
+    handleInputHorPaddingUpdate(e) {
+      this.inputHorPadding = e.target.value;
+    },
+    handleInputVertPaddingUpdate(e) {
+      this.inputVertPadding = e.target.value;
     },
   }
 }
