@@ -18,7 +18,6 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
   margin-top: 20px;
 }
 
@@ -31,7 +30,7 @@ input[type=text], textarea {
 }
 
 :root {
-  --primary: #ffffff;
-  --secondary: #000000;
+  --primary: #000000;
+  --secondary: #ffffff;
 }
 </style>

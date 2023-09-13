@@ -17,6 +17,7 @@
         type="color" 
         id="secondaryColorInput" 
         name="secondaryColorInput" 
+        value="#ffffff"
       />
       <label for="secondaryColorInput">Secondary</label>
 

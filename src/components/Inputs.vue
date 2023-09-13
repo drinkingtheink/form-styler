@@ -36,7 +36,7 @@ export default {
   computed: {
       inputStyles() {
           return {
-              'borderRadius': `${this.borderRadius}px`,
+              'borderRadius': `${this.borderRadius}%`,
               'padding': `${this.inputVertPadding}px ${this.inputHorPadding}px`,
               'border': `${this.borderWidth}px solid`
           }
