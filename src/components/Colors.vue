@@ -1,9 +1,11 @@
 <template>
   <div class="colors-collection">
-      <h2>Colors</h2>
+    <h2>Colors</h2>
 
-        <div class="color-swatch primary" />
-        <div class="color-swatch secondary" />
+    <section>
+        <div :style="primaryStyles" class="color-swatch primary">Primary</div>
+        <div :style="secondaryStyles" class="color-swatch secondary">Secondary</div>
+    </section>
   </div>
 </template>
 
@@ -13,10 +15,30 @@ export default {
   props: {
       primary: String,
       secondary: String,
+  },
+  computed: {
+      primaryStyles() {
+          return {
+              'backgroundColor': `${this.primary}`
+          }
+      },
+      secondaryStyles() {
+          return {
+              'backgroundColor': `${this.secondary}`
+          }
+      },
   }
 }
 </script>
 
 <style scoped>
+section {
+    display: flex;
+}
 
+.color-swatch {
+    width: 30%;
+    padding: 2rem;
+    margin-right: 10px;
+}
 </style>
