@@ -25,12 +25,6 @@
 <script>
 export default {
   name: 'Inputs',
-  props: {
-    borderRadius: String,
-    borderWidth: String,
-    inputHorPadding: String,
-    inputVertPadding: String,
-  },
 }
 </script>
 

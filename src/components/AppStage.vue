@@ -115,19 +115,9 @@
 
       <Colors />
 
-      <Inputs 
-        :borderRadius="borderRadius" 
-        :borderWidth="inputBorderWidth"
-        :inputHorPadding="inputHorPadding"
-        :inputVertPadding="inputVertPadding"
-      />
+      <Inputs />
 
-      <Buttons 
-        :borderRadius="borderRadius" 
-        :borderWidth="btnBorderWidth"
-        :btnHorPadding="btnHorPadding"
-        :btnVertPadding="btnVertPadding"
-      />
+      <Buttons />
     </div>
   </main>
 </template>
