@@ -157,9 +157,11 @@ export default {
     },
     handlePrimaryColorUpdate(e) {
       this.color.primary = e.target.value;
+      document.documentElement.style.setProperty('--primary', e.target.value);
     },
     handleSecondaryColorUpdate(e) {
       this.color.secondary = e.target.value;
+      document.documentElement.style.setProperty('--secondary', e.target.value);
     },
   }
 }

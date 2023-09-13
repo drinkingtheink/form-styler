@@ -29,4 +29,9 @@ label {
 input[type=text], textarea {
   min-width: 300px;
 }
+
+:root {
+  --primary: #ffffff;
+  --secondary: #000000;
+}
 </style>
