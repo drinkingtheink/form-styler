@@ -40,5 +40,6 @@ section {
     width: 30%;
     padding: 2rem;
     margin-right: 10px;
+    border: 5px solid rgba(0,0,0,0.2);
 }
 </style>
