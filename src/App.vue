@@ -32,5 +32,13 @@ input[type=text], textarea {
 :root {
   --primary: #000000;
   --secondary: #ffffff;
+  --inputBorderRadius: 10px;
+  --inputBorderWidth: 5px;
+  --inputHorPadding: 10px;
+  --inputVertPadding: 5px;
+  --inputBorderWidth: 5px;
+  --btnBorderRadius: 5px;
+  --btnHorPadding: 20px;
+  --btnVertPadding: 10px;
 }
 </style>

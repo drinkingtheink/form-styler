@@ -5,7 +5,6 @@
       <section>
         <label for="text-input-exanmple">Text Input Example:</label>
         <input 
-            :style="inputStyles" 
             id="text-input-example" 
             type="text" 
             placeholder="An Example Text Input"
@@ -15,7 +14,6 @@
       <section>
         <label for="textarea-input-exanmple">Textarea Input Example:</label>
         <textarea 
-            :style="inputStyles" 
             id="textarea-input-example" 
             type="text" 
             placeholder="An Example Text Input" 
@@ -33,15 +31,6 @@ export default {
     inputHorPadding: String,
     inputVertPadding: String,
   },
-  computed: {
-      inputStyles() {
-          return {
-              'borderRadius': `${this.borderRadius}%`,
-              'padding': `${this.inputVertPadding}px ${this.inputHorPadding}px`,
-              'border': `${this.borderWidth}px solid`
-          }
-      }
-  }
 }
 </script>
 
@@ -52,5 +41,6 @@ section {
 
 input, textarea {
     border-color: var(--primary) !important;
+    padding: var(--inputHorPadding)px var(--inputVertPadding)px;
 }
 </style>
